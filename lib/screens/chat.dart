@@ -15,11 +15,11 @@ class _ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
     final user = FirebaseAuth.instance.currentUser!;
-    final userEmail = user.email;
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('FlutterChat'),
+        title: Text(user.email!),
+        centerTitle: true,
         actions: [
           IconButton(
               onPressed: () {
